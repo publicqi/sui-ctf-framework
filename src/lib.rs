@@ -9,9 +9,8 @@ use once_cell::sync::Lazy;
 use tempfile::NamedTempFile;
 
 use sui_transactional_test_runner::args::{
-    SuiInitArgs, SuiPublishArgs, SuiRunArgs, SuiSubcommand, ViewObjectCommand, ProgrammableTransactionCommand
+    SuiInitArgs, SuiPublishArgs, SuiRunArgs, SuiSubcommand, ViewObjectCommand, ProgrammableTransactionCommand, SuiValue
 };
-use sui_transactional_test_runner::{SuiValue};
 use sui_transactional_test_runner::test_adapter::{FakeID, SuiTestAdapter};
 use sui_protocol_config::{ProtocolConfig, ProtocolVersion, Chain};
 pub use sui_types;
@@ -221,4 +220,4 @@ pub async fn fund_account(adapter: &mut SuiTestAdapter<'_>, sender: String, amou
     println!("[*] Output Call: {:#?}", output.unwrap());
 }
 
-pub type SuiValueAgain = move_transactional_test_runner::values::SuiValue;
+pub type SuiValueAgain = sui_transactional_test_runner::args::SuiValue;
