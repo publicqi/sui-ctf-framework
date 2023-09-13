@@ -15,7 +15,7 @@ diesel-async = { version = "0.3.0", features = ["deadpool", "postgres"] }
 
 sui-protocol-config = { git = "https://github.com/MystenLabs/sui", rev="8c2cf85b", package = "sui-protocol-config"}
 sui-types = { git = "https://github.com/MystenLabs/sui", rev="8c2cf85b", package = "sui-types"}
-sui-transactional-test-runner = { git = "https://github.com/MystenLabs/sui", rev="8c2cf85b", package = "sui-transactional-test-runner"}
+sui-transactional-test-runner = { git = "https://github.com/MystenLabs/sui", package = "sui-transactional-test-runner", rev="8c2cf85b"}
 
 move-symbol-pool = { git = "https://github.com/MystenLabs/sui", rev="8c2cf85b", package = "move-symbol-pool" }
 move-stdlib = { git = "https://github.com/MystenLabs/sui", rev="8c2cf85b", package = "move-stdlib" }
