@@ -9,8 +9,9 @@ use once_cell::sync::Lazy;
 use tempfile::NamedTempFile;
 
 use sui_transactional_test_runner::args::{
-    SuiInitArgs, SuiPublishArgs, SuiRunArgs, SuiSubcommand, SuiValue, ViewObjectCommand, ProgrammableTransactionCommand
+    SuiInitArgs, SuiPublishArgs, SuiRunArgs, SuiSubcommand, ViewObjectCommand, ProgrammableTransactionCommand
 };
+use sui_transactional_test_runner::{SuiValue};
 use sui_transactional_test_runner::test_adapter::{FakeID, SuiTestAdapter};
 use sui_protocol_config::{ProtocolConfig, ProtocolVersion, Chain};
 pub use sui_types;
