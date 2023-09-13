@@ -146,7 +146,7 @@ pub async fn call_function(
     mod_addr: AccountAddress,
     mod_name: &str,
     fun_name: &str,
-    args: Vec<SuiValue>,
+    args: Vec<SuiValueAgain>,
     signer: Option<String>,
 ) -> Result<(), Box<dyn error::Error>> {
     let module_id: ModuleId = ModuleId::new(mod_addr, Identifier::new(mod_name).unwrap());
@@ -220,3 +220,5 @@ pub async fn fund_account(adapter: &mut SuiTestAdapter<'_>, sender: String, amou
     println!("[*] Successfully funded Address {:#?} with {:#?}", account_address, amount);
     println!("[*] Output Call: {:#?}", output.unwrap());
 }
+
+pub type SuiValueAgain = move_transactional_test_runner::values::SuiValue;
